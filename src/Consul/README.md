@@ -11,13 +11,13 @@
 Register service in `providers` array in `config/app.php`
 
 ```
-YaangVu\Consul\ConsulProvider::class
+Yaangvu\PhpConsulVault\Laravel\Provider\ConsulProvider::class
 ```
 
 Publish consul configuration file
 
 ```
-php artisan vendor:publish --provider="YaangVu\Consul\ConsulProvider"
+php artisan vendor:publish --provider="YaangVu\PhpConsulVault\Laravel\Provider\ConsulProvider"
 ```
 
 ### For Lumen

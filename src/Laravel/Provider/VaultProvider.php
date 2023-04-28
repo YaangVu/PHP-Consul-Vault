@@ -7,14 +7,20 @@ use Yaangvu\PhpConsulVault\Laravel\Command\VaultKVCommand;
 
 class VaultProvider extends ServiceProvider
 {
+    protected string $defaultConfig;
+
+    public function __construct($app)
+    {
+        parent::__construct($app);
+        $this->defaultConfig = __DIR__ . '/../Config/vault.php';
+    }
+
     /**
      * Register services.
      */
     public function register(): void
     {
-        $this->app->singleton('command.kv.vault.yaangvu', function ($app) {
-            return new VaultKVCommand();
-        });
+        $this->mergeConfigFrom($this->defaultConfig, 'vault');
     }
 
     /**
@@ -22,17 +28,8 @@ class VaultProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->publishConfig();
-        $configPath = __DIR__ . '/../Config/vault.php';
-        $this->mergeConfigFrom($configPath, 'vault');
-    }
-
-    /**
-     * Publish the config file
-     */
-    protected function publishConfig(): void
-    {
-        $configPath = __DIR__ . '/../Config/vault.php';
-        $this->publishes([$configPath => $this->app->configPath('vault.php')], 'config');
+        $this->publishes([$this->defaultConfig => $this->app->configPath('vault.php')], 'config');
+        $this->mergeConfigFrom($this->defaultConfig, 'vault');
+        $this->commands([VaultKVCommand::class]);
     }
 }

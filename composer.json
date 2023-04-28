@@ -32,5 +32,13 @@
     "phpunit/phpunit": "^10.0",
     "illuminate/support": "^10.7",
     "illuminate/console": "^10.7"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Yaangvu\\PhpConsulVault\\Laravel\\Provider\\ConsulProvider",
+        "Yaangvu\\PhpConsulVault\\Laravel\\Provider\\VaultProvider"
+      ]
+    }
   }
 }
