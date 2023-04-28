@@ -34,7 +34,7 @@ Register service in `app/Providers/AppServiceProvider.php`
 Publish consul configuration file
 
 ``` shell
-cp vendor/yaangvu/laravel-consul/src/consul.php config/consul.php
+cp vendor/yaangvu/php-consul-vault/src/Laravel/Config/consul.php config/consul.php
 ```
 
 ### Config

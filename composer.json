@@ -36,8 +36,6 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Yaangvu\\PhpConsulVault\\Laravel\\Provider\\ConsulProvider",
-        "Yaangvu\\PhpConsulVault\\Laravel\\Provider\\VaultProvider"
       ]
     }
   }

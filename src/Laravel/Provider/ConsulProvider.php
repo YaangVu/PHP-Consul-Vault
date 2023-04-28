@@ -20,7 +20,7 @@ class ConsulProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom($this->defaultConfig, 'vault');
+        $this->mergeConfigFrom($this->defaultConfig, 'consul');
     }
 
     /**
@@ -28,7 +28,7 @@ class ConsulProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->publishes([$this->defaultConfig => $this->app->configPath('vault.php')], 'config');
+        $this->publishes([$this->defaultConfig => $this->app->configPath('consul.php')], 'config');
         $this->mergeConfigFrom($this->defaultConfig, 'vault');
         $this->commands([ConsulKVCommand::class]);
     }
