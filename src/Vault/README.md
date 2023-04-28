@@ -11,7 +11,7 @@
 Register service in `providers` array in `config/app.php`
 
 ```
-YaangVu\Consul\VaultProvider::class
+Yaangvu\PhpConsulVault\Laravel\Provider\VaultProvider::class
 ```
 
 Publish consul configuration file
@@ -34,7 +34,7 @@ Register service in `app/Providers/AppServiceProvider.php`
 Publish consul configuration file
 
 ``` shell
-cp vendor/yaangvu/php-consul-vault/src/Laravel/Config/consul.php config/vault.php
+cp vendor/yaangvu/php-consul-vault/src/Laravel/Config/vault.php config/vault.php
 ```
 
 ### Config
