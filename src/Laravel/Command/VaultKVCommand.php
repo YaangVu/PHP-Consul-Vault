@@ -58,18 +58,18 @@ class VaultKVCommand extends Command
         else
             throw new Exception('KV version does not supported');
 
-        $secrets   = [];
-        $envString = $this->startString . PHP_EOL;
+        $vaultEnv = $this->startString . PHP_EOL;
         foreach (config('vault.paths') as $path) {
-            $envString .= "#$path" . PHP_EOL;
-            $secrets   = array_merge($secrets, $kv->secrets($path));
+            $secrets  = [];
+            $vaultEnv .= "#$path" . PHP_EOL;
+            $secrets  = array_merge($secrets, $kv->secrets($path));
             foreach ($secrets as $key => $secret)
-                $envString .= "$key=$secret" . PHP_EOL;
+                $vaultEnv .= "$key=$secret" . PHP_EOL;
         }
-        $envString .= $this->endString . PHP_EOL;
+        $vaultEnv .= $this->endString . PHP_EOL;
 
 
-        $this->_putEnvironmentToDotEnv($env, $envString);
+        $this->_putEnvironmentToDotEnv(app()->basePath('.env'), $env . $vaultEnv);
         echo "Finished get env from Vault ..................................................................\n";
     }
 
@@ -79,15 +79,16 @@ class VaultKVCommand extends Command
     public function auth(): AuthStrategy
     {
         return match (config('vault.auth_method')) {
-            AuthMethodEnum::TOKEN => new TokenAuthStrategy(config('vault.token')),
-            AuthMethodEnum::USERPASS => new UserPassAuthStrategy(config('vault.username'), config('vault.password')),
+            AuthMethodEnum::TOKEN->value => new TokenAuthStrategy(config('vault.token')),
+            AuthMethodEnum::USERPASS->value => new UserPassAuthStrategy(config('vault.username'),
+                                                                        config('vault.password')),
             default => throw new Exception('This Vault auth method does not support')
         };
     }
 
     private function _putEnvironmentToDotEnv(string $file, string $env, $mode = FILE_APPEND | LOCK_EX): void
     {
-        File::put($file, $env, true);
+        File::put($file, $env, false);
     }
 
     private function _deleteOldEnv($env): array|string|null
