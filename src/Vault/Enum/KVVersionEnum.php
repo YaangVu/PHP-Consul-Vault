@@ -4,6 +4,6 @@ namespace Yaangvu\PhpConsulVault\Vault\Enum;
 
 enum KVVersionEnum: string
 {
-    case V1 = '1';
-    case V2 = '2';
+    case V1 = 'v1';
+    case V2 = 'v2';
 }

@@ -151,7 +151,7 @@ class Http
         // Trim 'slash /' character if it appears at the first of $uri
         $uri = ltrim($uri, '/');
 
-        $response = $this->getClient()->request($method, "$this->version/$uri", [...$options, 'debug' => true]);
+        $response = $this->getClient()->request($method, "$this->version/$uri", [...$options, 'debug' => false]);
 
         return json_decode($response->getBody()->getContents());
     }

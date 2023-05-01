@@ -4,12 +4,12 @@ namespace Yaangvu\PhpConsulVault\Vault\Dto\DbListConnections;
 
 use stdClass;
 
-readonly class Data
+class Data
 {
     /**
      * @param string[] $keys
      */
-    public function __construct(private array $keys)
+    public function __construct(private readonly array $keys)
     {
     }
 

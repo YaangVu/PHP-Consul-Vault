@@ -2,7 +2,7 @@
 
 namespace Yaangvu\PhpConsulVault\Vault\Enum;
 
-enum AuthMethodEnums: string
+enum AuthMethodEnum: string
 {
     case TOKEN = 'token';
     case USERPASS = 'userpass';

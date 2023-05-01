@@ -4,15 +4,15 @@ namespace Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail;
 
 use stdClass;
 
-readonly class Data
+class Data
 {
     public function __construct(
-        private array             $allowedRoles,
-        private ConnectionDetails $connectionDetails,
-        private string            $passwordPolicy,
-        private string            $pluginName,
-        private string            $pluginVersion,
-        private array             $rootCredentialsRotateStatements
+        private readonly array             $allowedRoles,
+        private readonly ConnectionDetails $connectionDetails,
+        private readonly string            $passwordPolicy,
+        private readonly string            $pluginName,
+        private readonly string            $pluginVersion,
+        private readonly array             $rootCredentialsRotateStatements
     )
     {
     }

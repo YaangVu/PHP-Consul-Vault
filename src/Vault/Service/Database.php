@@ -9,11 +9,11 @@ use Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail\DbConnectionDetailDTO;
 use Yaangvu\PhpConsulVault\Vault\Dto\DbListConnections\DbListConnectionsDTO;
 use Yaangvu\PhpConsulVault\Vault\Vault;
 
-readonly class Database
+class Database
 {
     private Http $http;
 
-    public function __construct(private Vault $vault)
+    public function __construct(private readonly Vault $vault)
     {
         $this->http = $this->vault->http;
     }

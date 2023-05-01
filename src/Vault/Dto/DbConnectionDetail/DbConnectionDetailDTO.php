@@ -4,17 +4,17 @@ namespace Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail;
 
 use stdClass;
 
-readonly class DbConnectionDetailDTO
+class DbConnectionDetailDTO
 {
     public function __construct(
-        private string $requestId,
-        private string $leaseId,
-        private bool   $renewable,
-        private int    $leaseDuration,
-        private Data   $data,
-        private mixed  $wrapInfo,
-        private mixed  $warnings,
-        private mixed  $auth
+        private readonly string $requestId,
+        private readonly string $leaseId,
+        private readonly bool   $renewable,
+        private readonly int    $leaseDuration,
+        private readonly Data   $data,
+        private readonly mixed  $wrapInfo,
+        private readonly mixed  $warnings,
+        private readonly mixed  $auth
     )
     {
     }

@@ -43,15 +43,11 @@ Append `.env` file with these configurations:
 
 ```dotenv
 VAULT_ENABLE=true
-VAULT_URI=${VAULT_URI}
+VAULT_HOST=${VAULT_HOST}
 VAULT_TOKEN=${VAULT_TOKEN}
-VAULT_SCHEME=${VAULT_SCHEME}
-VAULT_DC=${VAULT_DC}
-VAULT_PATH=${VAULT_PATH}
-VAULT_RECURSIVE=true
 ```
 
-Add any Key Folder Consul you want to be loaded
+Add any Vault Path you want to be loaded in `config/vault.php`
 
 ```php
 'paths' => [
@@ -61,6 +57,7 @@ Add any Key Folder Consul you want to be loaded
 ```
 
 ### Get env from Consul
+
 ```shell
 php artisan yaangvu:consul:kv
 ```

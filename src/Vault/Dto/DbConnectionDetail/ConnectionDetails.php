@@ -4,9 +4,9 @@ namespace Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail;
 
 use stdClass;
 
-readonly class ConnectionDetails
+class ConnectionDetails
 {
-    public function __construct(private string $backend, private string $connectionUrl)
+    public function __construct(private readonly string $backend, private readonly string $connectionUrl)
     {
     }
 
