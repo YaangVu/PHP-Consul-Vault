@@ -4,7 +4,7 @@
  * @Date   Apr 06, 2023
  */
 
-namespace Yaangvu\PhpConsulVault;
+namespace YaangVu\PhpConsulVault;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;

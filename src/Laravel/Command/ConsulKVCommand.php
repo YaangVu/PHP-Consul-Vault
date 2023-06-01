@@ -1,6 +1,6 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Laravel\Command;
+namespace YaangVu\PhpConsulVault\Laravel\Command;
 
 use DCarbone\PHPConsulAPI\Config;
 use DCarbone\PHPConsulAPI\Consul;
@@ -10,7 +10,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Attribute\AsCommand;
-use Yaangvu\PhpConsulVault\Consul\ConsulClient;
+use YaangVu\PhpConsulVault\Consul\ConsulClient;
 
 #[AsCommand(name: 'yaangvu:consul:kv')]
 class ConsulKVCommand extends Command

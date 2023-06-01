@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Yaangvu\\PhpConsulVault\\": "src/"
+      "YaangVu\\PhpConsulVault\\": "src/"
     },
     "classmap": [
       "src/"

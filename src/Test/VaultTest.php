@@ -4,16 +4,16 @@
  * @Date   Apr 03, 2023
  */
 
-namespace Yaangvu\PhpConsulVault\Test;
+namespace YaangVu\PhpConsulVault\Test;
 
 use GuzzleHttp\Exception\GuzzleException;
 use PHPUnit\Framework\TestCase;
-use Yaangvu\PhpConsulVault\Vault\Auth\TokenAuthStrategy;
-use Yaangvu\PhpConsulVault\Vault\Auth\UserPassAuthStrategy;
-use Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail\ConnectionDetails;
-use Yaangvu\PhpConsulVault\Vault\Service\Database;
-use Yaangvu\PhpConsulVault\Vault\Service\KV;
-use Yaangvu\PhpConsulVault\Vault\Vault;
+use YaangVu\PhpConsulVault\Vault\Auth\TokenAuthStrategy;
+use YaangVu\PhpConsulVault\Vault\Auth\UserPassAuthStrategy;
+use YaangVu\PhpConsulVault\Vault\Dto\DbConnectionDetail\ConnectionDetails;
+use YaangVu\PhpConsulVault\Vault\Service\Database;
+use YaangVu\PhpConsulVault\Vault\Service\KV;
+use YaangVu\PhpConsulVault\Vault\Vault;
 
 class VaultTest extends TestCase
 {

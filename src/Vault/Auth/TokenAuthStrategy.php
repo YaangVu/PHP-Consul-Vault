@@ -4,9 +4,9 @@
  * @Date   Apr 03, 2023
  */
 
-namespace Yaangvu\PhpConsulVault\Vault\Auth;
+namespace YaangVu\PhpConsulVault\Vault\Auth;
 
-use Yaangvu\PhpConsulVault\Http;
+use YaangVu\PhpConsulVault\Http;
 
 class TokenAuthStrategy implements AuthStrategy
 {

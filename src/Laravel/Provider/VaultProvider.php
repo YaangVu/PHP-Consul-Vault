@@ -1,18 +1,20 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Laravel\Provider;
+namespace YaangVu\PhpConsulVault\Laravel\Provider;
 
 use Illuminate\Support\ServiceProvider;
-use Yaangvu\PhpConsulVault\Laravel\Command\VaultKVCommand;
+use YaangVu\PhpConsulVault\Laravel\Command\VaultKVCommand;
 
 class VaultProvider extends ServiceProvider
 {
-    protected string $defaultConfig;
+    protected string $defaultConfigPath;
+    protected string $appConfigPath;
 
     public function __construct($app)
     {
         parent::__construct($app);
-        $this->defaultConfig = __DIR__ . '/../Config/vault.php';
+        $this->defaultConfigPath = __DIR__ . '/../Config/vault.php';
+        $this->appConfigPath     = $this->app->configPath('vault.php');
     }
 
     /**
@@ -20,7 +22,8 @@ class VaultProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom($this->defaultConfig, 'vault');
+        $this->mergeConfigFrom(file_exists($this->appConfigPath) ? $this->appConfigPath : $this->defaultConfigPath,
+                               'vault');
     }
 
     /**
@@ -28,8 +31,8 @@ class VaultProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->publishes([$this->defaultConfig => $this->app->configPath('vault.php')], 'config');
-        $this->mergeConfigFrom($this->defaultConfig, 'vault');
+        $this->publishes([$this->defaultConfigPath => $this->appConfigPath], 'config');
+
         $this->commands([VaultKVCommand::class]);
     }
 }

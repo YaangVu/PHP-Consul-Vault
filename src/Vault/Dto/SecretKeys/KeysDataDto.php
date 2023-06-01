@@ -1,6 +1,6 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Dto\SecretKeys;
+namespace YaangVu\PhpConsulVault\Vault\Dto\SecretKeys;
 
 use stdClass;
 

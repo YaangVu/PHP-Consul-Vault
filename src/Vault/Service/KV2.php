@@ -1,12 +1,12 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Service;
+namespace YaangVu\PhpConsulVault\Vault\Service;
 
 use Exception;
-use Yaangvu\PhpConsulVault\Http;
-use Yaangvu\PhpConsulVault\Vault\Dto\KV2\SecretDto;
-use Yaangvu\PhpConsulVault\Vault\Dto\SecretKeys\KeysDto;
-use Yaangvu\PhpConsulVault\Vault\Vault;
+use YaangVu\PhpConsulVault\Http;
+use YaangVu\PhpConsulVault\Vault\Dto\KV2\SecretDto;
+use YaangVu\PhpConsulVault\Vault\Dto\SecretKeys\KeysDto;
+use YaangVu\PhpConsulVault\Vault\Vault;
 
 /**
  * Key Value Version 1 Class

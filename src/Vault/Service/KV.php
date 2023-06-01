@@ -1,10 +1,10 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Service;
+namespace YaangVu\PhpConsulVault\Vault\Service;
 
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
-use Yaangvu\PhpConsulVault\Vault\Vault;
+use YaangVu\PhpConsulVault\Vault\Vault;
 
 interface KV
 {

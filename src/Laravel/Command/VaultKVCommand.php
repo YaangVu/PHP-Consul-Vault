@@ -1,20 +1,20 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Laravel\Command;
+namespace YaangVu\PhpConsulVault\Laravel\Command;
 
 use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 use Symfony\Component\Console\Attribute\AsCommand;
-use Yaangvu\PhpConsulVault\Vault\Auth\AuthStrategy;
-use Yaangvu\PhpConsulVault\Vault\Auth\TokenAuthStrategy;
-use Yaangvu\PhpConsulVault\Vault\Auth\UserPassAuthStrategy;
-use Yaangvu\PhpConsulVault\Vault\Enum\AuthMethodEnum;
-use Yaangvu\PhpConsulVault\Vault\Enum\KVVersionEnum;
-use Yaangvu\PhpConsulVault\Vault\Service\KV1;
-use Yaangvu\PhpConsulVault\Vault\Service\KV2;
-use Yaangvu\PhpConsulVault\Vault\Vault;
+use YaangVu\PhpConsulVault\Vault\Auth\AuthStrategy;
+use YaangVu\PhpConsulVault\Vault\Auth\TokenAuthStrategy;
+use YaangVu\PhpConsulVault\Vault\Auth\UserPassAuthStrategy;
+use YaangVu\PhpConsulVault\Vault\Enum\AuthMethodEnum;
+use YaangVu\PhpConsulVault\Vault\Enum\KVVersionEnum;
+use YaangVu\PhpConsulVault\Vault\Service\KV1;
+use YaangVu\PhpConsulVault\Vault\Service\KV2;
+use YaangVu\PhpConsulVault\Vault\Vault;
 
 #[AsCommand(name: 'yaangvu:vault:kv')]
 class VaultKVCommand extends Command

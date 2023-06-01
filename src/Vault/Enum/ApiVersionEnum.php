@@ -1,6 +1,6 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Enum;
+namespace YaangVu\PhpConsulVault\Vault\Enum;
 
 enum ApiVersionEnum: string
 {

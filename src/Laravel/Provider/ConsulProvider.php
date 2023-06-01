@@ -1,18 +1,20 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Laravel\Provider;
+namespace YaangVu\PhpConsulVault\Laravel\Provider;
 
 use Illuminate\Support\ServiceProvider;
-use Yaangvu\PhpConsulVault\Laravel\Command\ConsulKVCommand;
+use YaangVu\PhpConsulVault\Laravel\Command\ConsulKVCommand;
 
 class ConsulProvider extends ServiceProvider
 {
-    protected string $defaultConfig;
+    protected string $defaultConfigPath;
+    protected string $appConfigPath;
 
     public function __construct($app)
     {
         parent::__construct($app);
-        $this->defaultConfig = __DIR__ . '/../Config/consul.php';
+        $this->defaultConfigPath = __DIR__ . '/../Config/consul.php';
+        $this->appConfigPath     = $this->app->configPath('consul.php');
     }
 
     /**
@@ -20,7 +22,8 @@ class ConsulProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom($this->defaultConfig, 'consul');
+        $this->mergeConfigFrom(file_exists($this->appConfigPath) ? $this->appConfigPath : $this->defaultConfigPath,
+                               'consul');
     }
 
     /**
@@ -28,8 +31,8 @@ class ConsulProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->publishes([$this->defaultConfig => $this->app->configPath('consul.php')], 'config');
-        $this->mergeConfigFrom($this->defaultConfig, 'vault');
+        $this->publishes([$this->defaultConfigPath => $this->appConfigPath], 'config');
+
         $this->commands([ConsulKVCommand::class]);
     }
 }

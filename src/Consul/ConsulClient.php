@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Yaangvu\PhpConsulVault\Consul;
+namespace YaangVu\PhpConsulVault\Consul;
 
 use DCarbone\PHPConsulAPI\Config;
 use DCarbone\PHPConsulAPI\Consul;

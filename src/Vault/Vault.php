@@ -4,11 +4,11 @@
  * @Date   Apr 03, 2023
  */
 
-namespace Yaangvu\PhpConsulVault\Vault;
+namespace YaangVu\PhpConsulVault\Vault;
 
 use GuzzleHttp\Exception\GuzzleException;
-use Yaangvu\PhpConsulVault\Http;
-use Yaangvu\PhpConsulVault\Vault\Auth\AuthStrategy;
+use YaangVu\PhpConsulVault\Http;
+use YaangVu\PhpConsulVault\Vault\Auth\AuthStrategy;
 
 class Vault
 {

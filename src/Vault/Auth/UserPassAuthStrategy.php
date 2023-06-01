@@ -4,10 +4,10 @@
  * @Date   Apr 03, 2023
  */
 
-namespace Yaangvu\PhpConsulVault\Vault\Auth;
+namespace YaangVu\PhpConsulVault\Vault\Auth;
 
 use GuzzleHttp\Exception\GuzzleException;
-use Yaangvu\PhpConsulVault\Http;
+use YaangVu\PhpConsulVault\Http;
 
 class UserPassAuthStrategy implements AuthStrategy
 {

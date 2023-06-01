@@ -11,7 +11,7 @@
 Register service in `providers` array in `config/app.php`
 
 ```
-Yaangvu\PhpConsulVault\Laravel\Provider\ConsulProvider::class
+YaangVu\PhpConsulVault\Laravel\Provider\ConsulProvider::class
 ```
 
 Publish consul configuration file

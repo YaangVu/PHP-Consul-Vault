@@ -1,6 +1,6 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail;
+namespace YaangVu\PhpConsulVault\Vault\Dto\DbConnectionDetail;
 
 use stdClass;
 

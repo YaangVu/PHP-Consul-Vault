@@ -1,6 +1,6 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Dto\DbListConnections;
+namespace YaangVu\PhpConsulVault\Vault\Dto\DbListConnections;
 
 use stdClass;
 

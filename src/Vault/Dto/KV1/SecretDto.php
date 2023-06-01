@@ -1,6 +1,6 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Dto\KV1;
+namespace YaangVu\PhpConsulVault\Vault\Dto\KV1;
 
 use stdClass;
 

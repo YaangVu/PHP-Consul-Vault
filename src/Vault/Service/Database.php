@@ -1,13 +1,13 @@
 <?php
 
-namespace Yaangvu\PhpConsulVault\Vault\Service;
+namespace YaangVu\PhpConsulVault\Vault\Service;
 
 use GuzzleHttp\Exception\GuzzleException;
-use Yaangvu\PhpConsulVault\Http;
-use Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail\ConnectionDetails;
-use Yaangvu\PhpConsulVault\Vault\Dto\DbConnectionDetail\DbConnectionDetailDTO;
-use Yaangvu\PhpConsulVault\Vault\Dto\DbListConnections\DbListConnectionsDTO;
-use Yaangvu\PhpConsulVault\Vault\Vault;
+use YaangVu\PhpConsulVault\Http;
+use YaangVu\PhpConsulVault\Vault\Dto\DbConnectionDetail\ConnectionDetails;
+use YaangVu\PhpConsulVault\Vault\Dto\DbConnectionDetail\DbConnectionDetailDTO;
+use YaangVu\PhpConsulVault\Vault\Dto\DbListConnections\DbListConnectionsDTO;
+use YaangVu\PhpConsulVault\Vault\Vault;
 
 class Database
 {
