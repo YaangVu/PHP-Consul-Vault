@@ -8,9 +8,9 @@ namespace Yaangvu\PhpConsulVault\Vault\Auth;
 
 use Yaangvu\PhpConsulVault\Http;
 
-readonly class TokenAuthStrategy implements AuthStrategy
+class TokenAuthStrategy implements AuthStrategy
 {
-    public function __construct(private string $token)
+    public function __construct(private readonly string $token)
     {
 
     }

@@ -9,9 +9,9 @@ namespace Yaangvu\PhpConsulVault\Vault\Auth;
 use GuzzleHttp\Exception\GuzzleException;
 use Yaangvu\PhpConsulVault\Http;
 
-readonly class UserPassAuthStrategy implements AuthStrategy
+class UserPassAuthStrategy implements AuthStrategy
 {
-    public function __construct(private string $username, private string $password, private string $path = 'userpass')
+    public function __construct(private readonly string $username, private readonly string $password, private readonly string $path = 'userpass')
     {
 
     }

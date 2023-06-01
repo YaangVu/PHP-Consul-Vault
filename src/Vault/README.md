@@ -59,6 +59,6 @@ Add any Vault Path you want to be loaded in `config/vault.php`
 ### Get env from Consul
 
 ```shell
-php artisan yaangvu:consul:kv
+php artisan yaangvu:vault:kv
 ```
 
